@@ -1,0 +1,13 @@
+<div class="card-item">
+    <section class="card-header">
+        <h5><%= card.name %></h5>
+    </section>
+    <section class="card-body">
+        <div class="card-img">
+            <img src="<%= card.editions[0].image_url %>" alt="<%= card.name %>">
+        </div>
+        <div class="card-link">
+            <a href="/cards/<%= card.editions[0].multiverse_id %>">Read more</a>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,376 @@
+/* BODY */
+
+body {
+    background: #000000 url('../images/background.png') no-repeat top center;
+    background-attachment: fixed;
+    color: white;
+}
+
+;
+.outer {
+    position: relative;
+    overflow: auto;
+    top: 50%;
+    width: 100%;
+    height: 35rem;
+    height: 100%;
+    background: #404040;
+    border: 2px solid #F5F5F5;
+    border-radius: 10px;
+}
+
+.container-body {
+    padding-top: 20%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* CARD ITEM */
+
+.cards {
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    /* Or do it all in one line with flex flow */
+    -webkit-flex-flow: row wrap;
+    /* tweak the where items line up on the row */
+    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+    -webkit-align-content: flex-end;
+    /* border: 3px solid black; */
+    border-radius: 10px;
+}
+
+.card-item {
+    width: 18em;
+    background: rgba(91, 101, 139, 0.5);
+    height: 100%;
+    margin: 20px;
+    border: 1px solid royalblue;
+    border-radius: 10px;
+}
+
+.card-img>img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.card-header {
+    height: 3em!important;
+}
+
+@media only screen and (min-device-width : 992px) and (max-device-width : 1200px){
+    .p-4 {
+        font-size: 10px!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    body{
+        font-size: 14px!important;
+    }
+}
+
+@media (max-width: 576px) {
+    .outer {
+        position: relative;
+        overflow: auto;
+        top: 13%;
+        width: 100%;
+        height: 35rem;
+        height: 100%;
+        background: #787878;
+    }
+}
+
+
+/* HEADER */
+nav {
+    background: rgba(72, 72, 72, 0.9);
+    color: white;
+}
+
+nav a {
+    color: white;
+}
+
+.navbarfull {
+    width: 100%;
+}
+
+a:hover {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.pos-f-t {
+    margin-top: 69px;
+    width: 100%;
+}
+
+#navbarToggleExternalContent {
+    border-bottom: 1px dotted gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgba(72, 72, 72, 0.9);
+}
+
+.arrow-menu {
+    font-size: 25px;
+    width: 0;
+    top: -28px;
+    left: 50%;
+    background: transparent;
+}
+
+.colorItem {
+    width: 17px;
+    height: 17px;
+}
+
+.p-4 {
+    width: 100%;
+    display: table;
+    padding: 0!important;
+    padding-top: 10px;
+    height: 15rem;
+}
+
+.p-4 li {
+    float: left;
+    color: white;
+}
+
+.option-list>li {
+    width: 16%;
+}
+
+.menu-item-header {
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.menu-item-body {
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item-body ul {
+    padding: 0;
+    padding-left: 12%;
+}
+
+.colours ul li {
+    margin-left: 5px;
+}
+
+.colours ul li input {
+    margin-top: 8px;
+    margin-left: 3px;
+}
+
+.type ul li input {
+    margin-top: 8px;
+    margin-left: 3px;
+}
+
+.type ul li {
+    width: 85%;
+}
+
+.menu-item-body ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-body ul li ul {
+    padding: 0;
+}
+
+.rarity ul li {
+    width: 86%;
+}
+
+.sets {
+    width: 97%;
+}
+
+.link-list{
+    flex-direction: row;
+}
+
+.link-list>li{
+    padding-left: 15px;
+}
+
+.input-group-btn{
+    color: black;
+}
+
+.card-link{
+    padding-top: 10px;
+}
+
+/* ===== PAGINATION ===== */
+.pagination li{
+    background: white;
+}
+
+.colours ul li input {
+    margin-left: 1px;
+}
+
+/* Autocomplete */
+.ui-menu{
+    top: 69px;
+    z-index: 1031;
+} 
+
+/* ===== CARD DETAILS ===== */
+.table td{
+    border: none;
+}
+
+.container-details {
+    margin-top: 12rem;
+}
+
+.card-details {
+    background: rgba(91, 101, 139, 0.5);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.card-details img {
+    width: 22rem;
+    border-radius: 16px;
+}
+
+.card-details-header {
+    width: 22rem;
+    text-align: center;
+}
+
+.card-details-body {
+    display: flex;
+    flex-direction: row;
+    width: 65em;
+    min-width: 30rem;
+}
+
+.card-items {
+    font-size: 14px;
+    text-transform: capitalize;
+    width: 40%;
+    margin-left: 1rem;
+}
+
+/* ===== SET CARDS ===== */
+.set-cards>ul {
+    text-align: center;
+    padding: 0;
+}
+
+.set-cards{
+    /* margin-left: 150px; */
+    width: 25%;
+    height: 35rem;
+    margin-top: -75px;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-bottom: 35px;
+    overflow: scroll;
+}
+
+.set-cards .small-card-img{
+    width: 150px!important;
+    height: 210px;
+    border-radius: 9px;
+}
+
+/* .set-cards::-webkit-scrollbar { 
+    display: none; 
+} */
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.small-card {
+    padding-top: 2px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    max-width: 100%;
+    
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.small-card-title {
+    font-size: 14px;
+}
+
+  .hide {
+      visibility: hidden;
+  }
+
+  .small-card:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
+  .cost-item {
+      width: 1.2em!important;
+      height: 1.2em;
+      margin-right: 3px;
+  }
+
+  .card-items tr:nth-child(6) .cost-item{
+    width: 1.1em!important;
+    height: 1.1em;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  .flavor-text {
+      font-style: italic; 
+  }
+
+  .mtgprice {
+      color: black;
+  }
+
+  .mtgprice:hover {
+    color: black;
+}
+
+
+  
+

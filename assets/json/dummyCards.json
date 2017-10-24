@@ -1,0 +1,446 @@
+[
+	{
+        "name": "Abandon Reason",
+        "id": "abandon-reason",
+        "url": "https://api.deckbrew.com/mtg/cards/abandon-reason",
+        "store_url": "http://store.tcgplayer.com/magic/eldritch-moon/abandon-reason?partner=DECKBREW",
+        "types": [
+            "instant"
+        ],
+        "colors": [
+            "red"
+        ],
+        "cmc": 3,
+        "cost": "{2}{R}",
+        "text": "Up to two target creatures each get +1/+0 and gain first strike until end of turn.\nMadness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "modern": "legal",
+            "standard": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Eldritch Moon",
+                "set_id": "EMN",
+                "rarity": "uncommon",
+                "artist": "Josh Hass",
+                "multiverse_id": 414412,
+                "number": "115",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=414412",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/414412.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/EMN",
+                "store_url": "http://store.tcgplayer.com/magic/eldritch-moon/abandon-reason?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/414412"
+            }
+        ]
+    },
+    {
+        "name": "Abattoir Ghoul",
+        "id": "abattoir-ghoul",
+        "url": "https://api.deckbrew.com/mtg/cards/abattoir-ghoul",
+        "store_url": "http://store.tcgplayer.com/magic/product/show?partner=DECKBREW&ProductName=abattoir-ghoul",
+        "types": [
+            "creature"
+        ],
+        "subtypes": [
+            "zombie"
+        ],
+        "colors": [
+            "black"
+        ],
+        "cmc": 4,
+        "cost": "{3}{B}",
+        "text": "First strike\nWhenever a creature dealt damage by Abattoir Ghoul this turn dies, you gain life equal to that creature's toughness.",
+        "power": "3",
+        "toughness": "2",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "modern": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Duel Decks: Blessed vs. Cursed",
+                "set_id": "DDQ",
+                "rarity": "uncommon",
+                "artist": "Volkan Baga",
+                "multiverse_id": 409626,
+                "flavor": "Death took his humanity but not his skill with the knife.",
+                "number": "50",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=409626",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/409626.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/DDQ",
+                "store_url": "http://store.tcgplayer.com/magic/duel-decks-blessed-vs-cursed/abattoir-ghoul?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/409626"
+            },
+            {
+                "set": "Innistrad",
+                "set_id": "ISD",
+                "rarity": "uncommon",
+                "artist": "Volkan Baga",
+                "multiverse_id": 222911,
+                "flavor": "Death took his humanity but not his skill with the knife.",
+                "number": "85",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=222911",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/222911.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/ISD",
+                "store_url": "http://store.tcgplayer.com/magic/innistrad/abattoir-ghoul?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/222911"
+            }
+        ]
+    },
+    {
+        "name": "Abbey Gargoyles",
+        "id": "abbey-gargoyles",
+        "url": "https://api.deckbrew.com/mtg/cards/abbey-gargoyles",
+        "store_url": "http://store.tcgplayer.com/magic/product/show?partner=DECKBREW&ProductName=abbey-gargoyles",
+        "types": [
+            "creature"
+        ],
+        "subtypes": [
+            "gargoyle"
+        ],
+        "colors": [
+            "white"
+        ],
+        "cmc": 5,
+        "cost": "{2}{W}{W}{W}",
+        "text": "Flying, protection from red",
+        "power": "3",
+        "toughness": "4",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Masters Edition II",
+                "set_id": "ME2",
+                "rarity": "uncommon",
+                "artist": "Christopher Rush",
+                "multiverse_id": 184585,
+                "flavor": "\"Though Serra has not been seen for twenty years, her gargoyles still watch over our city and punish the guilty.\"\n—Gulsen, abbey matron",
+                "number": "1",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=184585",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/184585.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/ME2",
+                "store_url": "http://store.tcgplayer.com/magic/masters-edition-ii/abbey-gargoyles?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/184585"
+            },
+            {
+                "set": "Homelands",
+                "set_id": "HML",
+                "rarity": "uncommon",
+                "artist": "Christopher Rush",
+                "multiverse_id": 3010,
+                "flavor": "\"Though Serra has not been seen for twenty years, her Gargoyles still watch over our city and punish the guilty.\"\n—Gulsen, Abbey Matron",
+                "number": "",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=3010",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/3010.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/HML",
+                "store_url": "http://store.tcgplayer.com/magic/homelands/abbey-gargoyles?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/3010"
+            },
+            {
+                "set": "Fifth Edition",
+                "set_id": "5ED",
+                "rarity": "uncommon",
+                "artist": "Christopher Rush",
+                "multiverse_id": 4098,
+                "flavor": "\"They don't move, do they?\"\n\"Only for the wrong sort of people.\"\n\"Are we the wrong sort of people?\"",
+                "number": "",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=4098",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/4098.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/5ED",
+                "store_url": "http://store.tcgplayer.com/magic/fifth-edition/abbey-gargoyles?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/4098"
+            }
+        ]
+    },
+    {
+        "name": "Abbey Griffin",
+        "id": "abbey-griffin",
+        "url": "https://api.deckbrew.com/mtg/cards/abbey-griffin",
+        "store_url": "http://store.tcgplayer.com/magic/innistrad/abbey-griffin?partner=DECKBREW",
+        "types": [
+            "creature"
+        ],
+        "subtypes": [
+            "griffin"
+        ],
+        "colors": [
+            "white"
+        ],
+        "cmc": 4,
+        "cost": "{3}{W}",
+        "text": "Flying, vigilance",
+        "power": "2",
+        "toughness": "2",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "modern": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Innistrad",
+                "set_id": "ISD",
+                "rarity": "common",
+                "artist": "Jaime Jones",
+                "multiverse_id": 235595,
+                "flavor": "\"The darkness crawls with vampires and ghouls, but we are not without allies.\"\n—Mikaeus, the Lunarch",
+                "number": "1",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=235595",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/235595.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/ISD",
+                "store_url": "http://store.tcgplayer.com/magic/innistrad/abbey-griffin?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/235595"
+            }
+        ]
+    },
+    {
+        "name": "Abbey Matron",
+        "id": "abbey-matron",
+        "url": "https://api.deckbrew.com/mtg/cards/abbey-matron",
+        "store_url": "http://store.tcgplayer.com/magic/product/show?partner=DECKBREW&ProductName=abbey-matron",
+        "types": [
+            "creature"
+        ],
+        "subtypes": [
+            "cleric",
+            "human"
+        ],
+        "colors": [
+            "white"
+        ],
+        "cmc": 3,
+        "cost": "{2}{W}",
+        "text": "{W}, {T}: Abbey Matron gets +0/+3 until end of turn.",
+        "power": "1",
+        "toughness": "3",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Homelands",
+                "set_id": "HML",
+                "rarity": "common",
+                "artist": "Mike Kimble",
+                "multiverse_id": 3011,
+                "flavor": "\"The Matrons are kindly souls, but don't ask one for an ale.\"\n—Halina, Dwarven Trader",
+                "number": "",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=3011",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/3011.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/HML",
+                "store_url": "http://store.tcgplayer.com/magic/homelands/abbey-matron?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/3011"
+            },
+            {
+                "set": "Homelands",
+                "set_id": "HML",
+                "rarity": "common",
+                "artist": "Mike Kimble",
+                "multiverse_id": 3012,
+                "flavor": "\"The Matrons still say Serra is coming back. I bet she never even existed.\"\n—Murat, Death Speaker",
+                "number": "",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=3012",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/3012.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/HML",
+                "store_url": "http://store.tcgplayer.com/magic/homelands/abbey-matron?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/3012"
+            }
+        ]
+    },
+    {
+        "name": "Abbot of Keral Keep",
+        "id": "abbot-of-keral-keep",
+        "url": "https://api.deckbrew.com/mtg/cards/abbot-of-keral-keep",
+        "store_url": "http://store.tcgplayer.com/magic/product/show?partner=DECKBREW&ProductName=abbot-of-keral-keep",
+        "types": [
+            "creature"
+        ],
+        "subtypes": [
+            "human",
+            "monk"
+        ],
+        "colors": [
+            "red"
+        ],
+        "cmc": 2,
+        "cost": "{1}{R}",
+        "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen Abbot of Keral Keep enters the battlefield, exile the top card of your library. Until end of turn, you may play that card.",
+        "power": "2",
+        "toughness": "1",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "modern": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Prerelease Events",
+                "set_id": "pPRE",
+                "rarity": "special",
+                "artist": "Deruchenko Alexander",
+                "multiverse_id": 0,
+                "number": "198",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=0",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/0.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/pPRE",
+                "store_url": "http://store.tcgplayer.com/magic/prerelease-events/abbot-of-keral-keep?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/0"
+            },
+            {
+                "set": "Magic Origins",
+                "set_id": "ORI",
+                "rarity": "rare",
+                "artist": "Deruchenko Alexander",
+                "multiverse_id": 398411,
+                "number": "127",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=398411",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/398411.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/ORI",
+                "store_url": "http://store.tcgplayer.com/magic/magic-origins/abbot-of-keral-keep?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/398411"
+            }
+        ]
+    },
+    {
+        "name": "Abduction",
+        "id": "abduction",
+        "url": "https://api.deckbrew.com/mtg/cards/abduction",
+        "store_url": "http://store.tcgplayer.com/magic/product/show?partner=DECKBREW&ProductName=abduction",
+        "types": [
+            "enchantment"
+        ],
+        "subtypes": [
+            "aura"
+        ],
+        "colors": [
+            "blue"
+        ],
+        "cmc": 4,
+        "cost": "{2}{U}{U}",
+        "text": "Enchant creature\nWhen Abduction enters the battlefield, untap enchanted creature.\nYou control enchanted creature.\nWhen enchanted creature dies, return that card to the battlefield under its owner's control.",
+        "formats": {
+            "commander": "legal",
+            "legacy": "legal",
+            "vintage": "legal"
+        },
+        "editions": [
+            {
+                "set": "Weatherlight",
+                "set_id": "WTH",
+                "rarity": "uncommon",
+                "artist": "Colin MacNeil",
+                "multiverse_id": 4476,
+                "number": "",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=4476",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/4476.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/WTH",
+                "store_url": "http://store.tcgplayer.com/magic/weatherlight/abduction?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/4476"
+            },
+            {
+                "set": "Classic Sixth Edition",
+                "set_id": "6ED",
+                "rarity": "uncommon",
+                "artist": "Colin MacNeil",
+                "multiverse_id": 14526,
+                "number": "55",
+                "layout": "normal",
+                "price": {
+                    "low": 0,
+                    "median": 0,
+                    "high": 0
+                },
+                "url": "https://api.deckbrew.com/mtg/cards?multiverseid=14526",
+                "image_url": "https://image.deckbrew.com/mtg/multiverseid/14526.jpg",
+                "set_url": "https://api.deckbrew.com/mtg/sets/6ED",
+                "store_url": "http://store.tcgplayer.com/magic/classic-sixth-edition/abduction?partner=DECKBREW",
+                "html_url": "https://deckbrew.com/mtg/cards/14526"
+            }
+        ]
+    }
+]

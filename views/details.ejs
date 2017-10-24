@@ -1,0 +1,61 @@
+<% include components/header.ejs %>
+<script src="/js/details.js"></script>
+<div class="container container-details">
+  <div class="row justify-content-md-left">
+    <div class="card-details">
+      <section class="card-details-header">
+        <h2 class="card-title"><%= card.name %></h2>
+      </section>
+      <section class="card-details-body">
+        <div class="card-details-image">
+          <img src="<%= card.editions[0].image_url %>" alt="<%= card.name %>">
+        </div>
+        <div class="card-items">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Edition:</td>
+                <td><%= card.editions[0].set %></td>
+              </tr>
+              <tr>
+                <td>Type:</td>
+                <td><%= card.types[0] %></td>
+              </tr>
+              <tr>
+                <td>Cost:</td>
+                <td><%= card.cost %></td>
+              </tr>
+              <tr>
+                <td>Rarity:</td>
+                <td><%= card.editions[0].rarity %></td>
+              </tr>
+              <tr>
+                <td>Power/Though:</td>
+                <td><%= card.power %> / <%= card.toughness %></td>
+              </tr>
+              <tr>
+                <td>Text:</td>
+                <td><%= card.text %><span class="flavor-text"> <%= card.editions[0].flavor %></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="set-cards">
+            <ul>
+              <% for(let item in setCards){ %>
+                <div class="small-card">
+                  <a href="/cards/<%= setCards[item].editions[0].multiverse_id %>">
+                    <div class="small-card-title"><%= setCards[item].name %></div>
+                    <div class="small-card-body">
+                      <img class="small-card-img" src="<%= setCards[item].editions[0].image_url %>" alt="<%= setCards[item].name %>"/>
+                    </div>
+                  </a>
+                </div>  
+              <% } %>
+            </ul>
+          </div>
+      </section>
+    </div>
+  </div>
+</div>
+<% include components/footer.ejs %>

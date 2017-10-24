@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MTG Portal</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/jquery-ui.css">
+  <link rel="stylesheet" href="/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/mobile.css">
+  <script src="/js/jquery-3.2.1.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/custom.js"></script>
+</head>
+
+<body>
+  <nav class="navbar fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <h2>MTGPortal</h2>
+        </a>
+      </div>
+      <div class="navbar-nav mr-auto">
+        <form action="/" method="post" name="searchForm">
+          <div class="input-group">
+            <input id="tags" type="text" name="name" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <a class="btn btn-default" type="button" onclick="document.forms['searchForm'].submit(); return false;">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </a>
+            </span>
+          </div>
+      </div>
+      <ul class="nav navbar-nav ml-auto link-list">
+        <li>
+          <a href="#">Help</a>
+        </li>
+        <li>
+          <a href="#">Contact Me</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <div class="pos-f-t fixed-top">
+    <div class="container">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-inverse p-4">
+          <ul class="option-list">
+            <li>
+              <header class="menu-item-header">Editions</header>
+              <div class="menu-item-body">
+                <select name="set" class="sets">
+                  <option value="">All</option>
+                  <% for(var i = 0; i < sets.length; i++){ %>
+                    <option title="<%= sets[i].name %>" value="<%= sets[i].id %>" style="display: block; font-size: 13px;">
+                      <%= sets[i].name.substring(0, 21) %>
+                    </option>
+                    <% } %>
+                </select>
+              </div>
+            </li>
+            <li>
+              <header class="menu-item-header">Colors</header>
+              <div class="menu-item-body colours">
+                <ul>
+                  <li>
+                    <img title="Black" src="http://eakett.ca/mtgimage/symbol/mana/b.svg" class="colorItem" alt="Black">
+                    <input type="checkbox" name="colors" value="black">
+                  </li>
+                  <li>
+                    <img title="Blue" src="http://eakett.ca/mtgimage/symbol/mana/u.svg" class="colorItem" alt="Blue">
+                    <input type="checkbox" name="colors" value="blue">
+                  </li>
+                  <li>
+                    <img title="Green" src="http://eakett.ca/mtgimage/symbol/mana/g.svg" class="colorItem" alt="Green">
+                    <input type="checkbox" name="colors" value="green">
+                  </li>
+                  <li>
+                    <img title="Red" src="http://eakett.ca/mtgimage/symbol/mana/r.svg" class="colorItem" alt="Red">
+                    <input type="checkbox" name="colors" value="red">
+                  </li>
+                  <li>
+                    <img title="White" src="http://eakett.ca/mtgimage/symbol/mana/w.svg" class="colorItem" alt="White" tooltip="White">
+                    <input type="checkbox" name="colors" value="white">
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <header class="menu-item-header">Rarity</header>
+              <div class="menu-item-body rarity">
+                <ul>
+                  <li>
+                    <ul>
+                      <li class="rarity-title">Mythic</li>
+                      <input type="checkbox" name="rarity" value="mythic">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="rarity-title">Rare</li>
+                      <input type="checkbox" name="rarity" value="rare">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="rarity-title">Uncommon</li>
+                      <input type="checkbox" name="rarity" value="uncommon">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="rarity-title">Common</li>
+                      <input type="checkbox" name="rarity" value="common">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="rarity-title">Land</li>
+                      <input type="checkbox" name="rarity" value="land">
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <header class="menu-item-header">Type</header>
+              <div class="menu-item-body type">
+                <ul>
+                  <li>
+                    <ul>
+                      <li class="type-title">Artifact</li>
+                      <input type="checkbox" name="types" value="artifact">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="type-title">Creature</li>
+                      <input type="checkbox" name="types" value="creature">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="type-title">Enchantment</li>
+                      <input type="checkbox" name="types" value="enchantment">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="type-title">Instant</li>
+                      <input type="checkbox" name="types" value="instant">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="type-title">Sorcery</li>
+                      <input type="checkbox" name="types" value="sorcery">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="type-title">Land</li>
+                      <input type="checkbox" name="types" value="land">
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="type-title">Planeswalker</li>
+                      <input type="checkbox" name="types" value="planeswalker">
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <header class="menu-item-header">Power/Thoughness</header>
+              <div class="menu-item-body powtho">
+                <ul>
+                  <li>
+                    <p>Power</p>
+                    <p>
+                      <select style="margin-right: 5px;" name="power" value="from">
+                        <option></option>
+                        <% for(var i = 0; i < 16; i++){ %>
+                          <option>
+                            <%= i %>
+                          </option>
+                          <% } %>
+                      </select>
+                      to
+                      <select style="margin-left: 5px;" name="power" value="to">
+                        <option></option>
+                        <% for(var i = 0; i < 16; i++){ %>
+                          <option>
+                            <%= i %>
+                          </option>
+                          <% } %>
+                      </select>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Toughness</p>
+                    <span>
+                      <select style="margin-right: 5px;" name="toughness" value="from">
+                        <option></option>
+                        <% for(var i = 0; i < 16; i++){ %>
+                          <option>
+                            <%= i %>
+                          </option>
+                          <% } %>
+                      </select>
+                      to
+                      <select style="margin-left: 5px;" name="toughness" value="to">
+                        <option></option>
+                        <% for(var i = 0; i < 16; i++){ %>
+                          <option>
+                            <%= i %>
+                          </option>
+                          <% } %>
+                      </select>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <header class="menu-item-header">Converted Cost</header>
+              <div class="menu-item-body convcost">
+                <ul>
+                  <li>
+                    <p>Converted Cost</p>
+                    <span>
+                      <select style="margin-right: 5px;" name="cmc" value="from">
+                        <option></option>
+                        <% for(var i = 0; i < 16; i++){ %>
+                          <option>
+                            <%= i %>
+                          </option>
+                          <% } %>
+                      </select>
+                      to
+                      <select style="margin-left: 5px;" name="cmc" value="to">
+                        <option></option>
+                        <% for(var i = 0; i < 16; i++){ %>
+                          <option>
+                            <%= i %>
+                          </option>
+                          <% } %>
+                      </select>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+            </form>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse bg-inverse arrow-menu">
+        <a href="#" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-chevron-circle-down fa-3 dropdown-arrow open" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </div>
+  </div>
