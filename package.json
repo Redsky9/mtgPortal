@@ -19,7 +19,9 @@
     "nodemon": "^1.12.1"
   },
   "devDependencies": {
+    "async-request": "^1.2.0",
     "body-parser": "^1.18.2",
+    "crawler": "^1.1.1",
     "download": "^6.2.5",
     "ejs": "^2.5.7",
     "express": "^4.16.1",
@@ -28,6 +30,7 @@
     "gulp-load-plugins": "^1.5.0",
     "image-downloader": "^3.3.0",
     "nodemon": "^1.12.1",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "whatwg-fetch": "^2.0.3"
   }
 }

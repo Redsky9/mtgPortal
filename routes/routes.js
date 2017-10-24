@@ -4,6 +4,7 @@ let autocomplete = require('../assets/json/allCardNames.json');
 let sets = [];
 let bP = require('body-parser');
 let cards;
+let currentPage = 0;
 
 module.exports = (app) => {
 
@@ -19,9 +20,9 @@ module.exports = (app) => {
         res.send(autocomplete);
     });
 
-    app.get('/cards/:id', function(req, res) {
-        let card = $.getCardById(req.params.id);
-        let setCards = $.getCardBySet([], card[0].editions[0].set_id);
+    app.get('/cards/:id', async function(req, res) {
+        let card = await $.getCardById(req.params.id);
+        let setCards = await $.getCardBySet([], card[0].editions[0].set_id);
         res.locals.get = function() {
             var args = Array.prototype.slice.call(arguments, 0);
             var path = args[0].split('.');
@@ -42,6 +43,12 @@ module.exports = (app) => {
 // ===== POST =====
     app.post('/', (req, res) => {
         cards = $.findCards(req.body);
+        let pageNumber = cards.length / 30;
+        let pageData = [];
+        for(let i = (currentPage * 30); i <  ((currentPage + 1) * 30); i++){
+            pageData.push(cards[i]);
+        }
+        console.log(pageData.length);
         res.render('index.ejs', {sets: sets, cards: cards});
     });
 

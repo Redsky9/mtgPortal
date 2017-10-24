@@ -1,0 +1,34 @@
+{
+  "scss": {
+    "src": "public/scss/*.css",
+    "dest": "dist/public/css"
+  },
+  "css": {
+    "src": "public/css/*.css",
+    "dest": "dist/public/css"
+  },
+  "js": {
+    "src": "public/js/*.js",
+    "dest": "dist/public/js"
+  },
+  "fonts": {
+    "src": "public/fonts/*.*",
+    "dest": "dist/public/fonts"
+  },
+  "images": {
+    "src": "public/images/*.jpg",
+    "dest": "dist/public/images"
+  },
+  "ejs": {
+    "src": "views",
+    "dest": "dist/views"
+  },
+  "util": {
+    "src": "util",
+    "dest": "dist/util"
+  },
+  "routes": {
+    "src": "routes",
+    "dest": "dist/routes"
+  }
+}
