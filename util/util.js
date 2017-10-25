@@ -2,7 +2,6 @@ let fs = require('fs');
 let bP = require('body-parser');
 let allCards = require('../assets/json/AllCards.json');
 let allSets = require('../assets/json/AllSets.json');
-let request = require('request');
 
 let sets = [];
 
