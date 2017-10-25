@@ -67,8 +67,4 @@ module.exports = (app) => {
         res.redirect('/page=0');
     });
 
-
-    function testIt() {
-        
-    }
 };
