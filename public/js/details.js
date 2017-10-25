@@ -15,7 +15,7 @@ $(() => {
 
   (function buildText() {
     console.log($(text).html());
-    temp = $(text).html();
+    temp = $(text).html().replace(/\n/g, "<br/>").replace(/\(/g, '<span class="flavor-text">(').replace(/\)/g, ')</span>');
     for(let i = 0; i < temp.length; i++){
       if(temp[i] == '{' && temp[i + 2] == '}'){
         temp = temp.replace(temp.substring(i, i + 3), insertImage(temp[i + 1])); 

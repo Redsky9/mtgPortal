@@ -13,7 +13,7 @@ module.exports = (app) => {
 // ===== GET =====
     app.get('/', (req, res) => {
         sets = $.getAllSets();
-        res.render('index.ejs', {sets: sets, cards: dummy, aaa: autocomplete});
+        res.render('index.ejs', {sets: sets, cards: dummy, aaa: autocomplete, currentPage: currentPage});
     });
 
     app.get('/auto', (req, res) => {
@@ -40,17 +40,33 @@ module.exports = (app) => {
         res.render('details.ejs', {sets: sets, aaa: autocomplete, card: card[0], setCards: setCards});
     });
 
+    app.get('/page=:id', (req, res) => {
+        console.log(req.params.id);
+        currentPage = req.params.id;
+        let pageNumber = cards.length / 30;
+        let pageCards = [];
+        let 
+        for(let i = (currentPage * 30); i <  ((currentPage + 1) * 30); i++){
+            pageCards.push(cards[i]);
+        }
+        console.log(pageCards.length);
+        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage});
+    });
+
 // ===== POST =====
     app.post('/', (req, res) => {
         cards = $.findCards(req.body);
-        let pageNumber = cards.length / 30;
-        let pageData = [];
-        for(let i = (currentPage * 30); i <  ((currentPage + 1) * 30); i++){
-            pageData.push(cards[i]);
-        }
-        console.log(pageData.length);
-        res.render('index.ejs', {sets: sets, cards: cards});
+        // let pageNumber = cards.length / 30;
+        // let pageData = [];
+        // for(let i = (currentPage * 30); i <  ((currentPage + 1) * 30); i++){
+        //     pageData.push(cards[i]);
+        // }
+        // console.log(pageData.length);
+        // res.render('index.ejs', {sets: sets, cards: cards});
+        // currentPage = 0;
+        res.redirect('/page=0');
     });
+
 
     function testIt() {
         

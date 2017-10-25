@@ -45,6 +45,6 @@ $(() => {
     });
 
     function testIt(val) {
-        console.log(val);
+        // console.log(val);
     }
 });
