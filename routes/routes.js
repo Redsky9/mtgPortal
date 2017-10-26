@@ -3,6 +3,7 @@ let dummy = require('../assets/json/dummyCards.json');
 let autocomplete = require('../assets/json/allCardNames.json');
 let sets = [];
 let bP = require('body-parser');
+let qs = require('qs');
 let cards;
 let currentPage = 1;
 
@@ -56,6 +57,7 @@ module.exports = (app) => {
 // ===== POST =====
     app.post('/', (req, res) => {
         cards = $.findCards(req.body);
+        console.log(qs.stringify(req.body, { a: null, b: undefined }));
         // let pageNumber = cards.length / 30;
         // let pageData = [];
         // for(let i = (currentPage * 30); i <  ((currentPage + 1) * 30); i++){
@@ -64,6 +66,7 @@ module.exports = (app) => {
         // console.log(pageData.length);
         // res.render('index.ejs', {sets: sets, cards: cards});
         // currentPage = 0;
+        // res.redirect('/page=0');
         res.redirect('/page=0');
     });
 

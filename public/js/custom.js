@@ -4,6 +4,15 @@ $(() => {
     // Show/Hide dropdown menu
     let arrow = $('.dropdown-arrow');
     let menu = $('.drop-menu');
+
+    $("form").submit(function(){
+        $("input").each(function(index, obj){
+            console.log(obj);
+            if($(obj).val() == "") {
+                $(obj).remove();
+            }
+        });
+    });
     
 
     $(arrow).on('click', () => {
