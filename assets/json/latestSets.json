@@ -1,0 +1,22 @@
+[
+	{
+		"id": "XLN",
+		"name": "Ixalan",
+		"image_url": "https://magic.wizards.com/sites/mtg/files/sYCla2unGd_0.jpg"
+	},
+	{
+		"id": "HOU",
+		"name": "Hour of Devastation"
+		"image_url": "https://magic.wizards.com/sites/mtg/files/HOU_Header.jpg"
+	},
+	{
+		"id": "AKH",
+		"name": "Amonkhet",
+		"image_url": "http://queuetimes.com/wp-content/uploads/2017/02/636138420089070842.jpg"
+	},
+	{
+		"id": "AER",
+		"name": "Aether Revolt",
+		"image_url": "https://magic.wizards.com/sites/mtg/files/images/featured/AER_Header_Preloader_0.jpg"
+	},
+]

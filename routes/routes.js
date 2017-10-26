@@ -14,7 +14,7 @@ module.exports = (app) => {
 // ===== GET =====
     app.get('/', (req, res) => {
         sets = $.getAllSets();
-        res.render('index.ejs', {sets: sets, cards: dummy, aaa: autocomplete, currentPage: -1});
+        res.render('index.ejs', {sets: sets, cards: dummy, aaa: autocomplete, currentPage: -1, searchParams: {}});
     });
 
     app.get('/auto', (req, res) => {
@@ -41,8 +41,35 @@ module.exports = (app) => {
         res.render('details.ejs', {sets: sets, aaa: autocomplete, card: card[0], setCards: setCards});
     });
 
-    app.get('/page=:id', (req, res) => {
-        currentPage = req.params.id;
+    app.get('/set/:id?', async function(req, res) {
+        let setId = req.params.id.toUpperCase();
+        if(Object.keys(req.query).length == 0){
+            res.redirect('/set/' + setId + '?page=0');
+            return;
+        }
+        let setCards = await $.getCardBySet([], setId);
+
+        currentPage = req.query.page;
+        delete req.query['page'];
+        let searchParams = ("set/" + setId + "?");
+        let pageNumber = setCards.length / 30;
+        let pageCards = [];
+
+        let limit = (setCards.length < ((+currentPage + 1) * 30) ? setCards.length : ((+currentPage + 1) * 30));
+        for(let i = (currentPage * 30); i < limit; i++){
+            pageCards.push(setCards[i]);
+        }
+        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage, searchParams: searchParams});
+    });    
+
+    app.get('/search?', (req, res) => {
+        if(Object.keys(req.query).length == 2 && Object.keys(req.query)[0] == 'set'){
+            res.redirect('/set/' + req.query.set + '?page=0');
+            return;
+        }
+        currentPage = req.query.page;
+        delete req.query['page'];
+        let searchParams = ("search?&" + qs.stringify(req.query));
         let pageNumber = cards.length / 30;
         let pageCards = [];
 
@@ -51,23 +78,21 @@ module.exports = (app) => {
             pageCards.push(cards[i]);
         }
         console.log(cards.length);
-        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage});
+        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage, searchParams: searchParams});
     });
+
 
 // ===== POST =====
     app.post('/', (req, res) => {
+        let data = req.body;
+        let final = {};
+        for(let item in data){
+            if(data[item] !== '' && data[item][0] !== ''){
+                final[item] = data[item];
+            }
+        }
         cards = $.findCards(req.body);
-        console.log(qs.stringify(req.body, { a: null, b: undefined }));
-        // let pageNumber = cards.length / 30;
-        // let pageData = [];
-        // for(let i = (currentPage * 30); i <  ((currentPage + 1) * 30); i++){
-        //     pageData.push(cards[i]);
-        // }
-        // console.log(pageData.length);
-        // res.render('index.ejs', {sets: sets, cards: cards});
-        // currentPage = 0;
-        // res.redirect('/page=0');
-        res.redirect('/page=0');
+        res.redirect('/search?' + qs.stringify(final) + '&page=0');
     });
 
 };
