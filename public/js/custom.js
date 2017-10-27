@@ -11,7 +11,9 @@ $(() => {
         dots: true,
         infinite: true,
         cssEase: 'linear',
-        focusOnSelect: true
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
       });
 
     $("form").submit(function(){

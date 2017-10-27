@@ -20,7 +20,7 @@ body {
 }
 
 .container-body {
-    padding-top: 15%;
+    padding-top: 10%;
 }
 
 a {
@@ -262,6 +262,7 @@ ul {
     background: rgba(91, 101, 139, 0.5);
     padding: 40px;
     border-radius: 5px;
+    box-shadow: 0 0 30px black;
 }
 
 .card-details img {
@@ -296,7 +297,7 @@ ul {
 
 .set-cards{
     /* margin-left: 150px; */
-    width: 25%;
+    width: 30%;
     height: 35rem;
     margin-top: -75px;
     padding-top: 25px;
@@ -344,6 +345,11 @@ ul {
     -moz-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
+}
+
+.small-card img:hover {
+    box-shadow: 0 0 20px white;
+
   }
 
   .cost-item {
@@ -375,7 +381,7 @@ ul {
 /* ===== CAROUSEL ===== */
 .slider {
     width: 960px;
-    /* height: 560px!important; */
+    box-shadow: 0 0 30px black;
 }
 
 .carousel-img {
@@ -386,7 +392,7 @@ ul {
 
 .slick-dots li button:before {
     color: white!important;
-    font-size: 20px!important;
+    font-size: 15px!important;
 }
 
 .title-shadow {
@@ -405,7 +411,7 @@ ul {
 .label-text
 {
     position: absolute;
-    font-size: 45px;
+    font-size: 35px;
     padding: 9px;
     margin: 15px;
     background-color:rgba(120, 120, 120, 0.5);
@@ -415,4 +421,8 @@ ul {
     white-space: nowrap;
     overflow: hidden;
     border-radius: 6px;
+}
+
+.slick-next .slick-arrow {
+    right: 10px;
 }
