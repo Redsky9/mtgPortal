@@ -5,6 +5,15 @@ $(() => {
     let arrow = $('.dropdown-arrow');
     let menu = $('.drop-menu');
 
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: true,
+        cssEase: 'linear',
+        focusOnSelect: true
+      });
+
     $("form").submit(function(){
         $("input").each(function(index, obj){
             console.log(obj);
@@ -38,7 +47,7 @@ $(() => {
       });
 
     // Submit Autocomplete form on click
-    $( "#tags" ).autocomplete({
+    $("#tags").autocomplete({
         minLength: 3,
         source: finalData,
         select: function( event, ui ) {
@@ -48,12 +57,8 @@ $(() => {
     });
 
     // Remove title when zooming on image
-    $( ".small-card" ).hover( function() {
+    $(".small-card").hover( function() {
         let card_title = $( this ).find(".small-card-title");
         $( card_title ).toggleClass( "hide" );
     });
-
-    function testIt(val) {
-        // console.log(val);
-    }
 });

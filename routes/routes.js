@@ -1,9 +1,11 @@
 let $ = require('../util/util.js');
 let dummy = require('../assets/json/dummyCards.json');
 let autocomplete = require('../assets/json/allCardNames.json');
+let latest_sets = require('../assets/json/latestSets.json');
 let sets = [];
 let bP = require('body-parser');
 let qs = require('qs');
+let math = require('mathjs');
 let cards;
 let currentPage = 1;
 
@@ -11,10 +13,11 @@ module.exports = (app) => {
 
     app.use(bP.urlencoded({extended: true}));
     app.use(bP.json());
+
 // ===== GET =====
     app.get('/', (req, res) => {
         sets = $.getAllSets();
-        res.render('index.ejs', {sets: sets, cards: dummy, aaa: autocomplete, currentPage: -1, searchParams: {}});
+        res.render('homepage.ejs', {sets: sets, latestSets: latest_sets, aaa: autocomplete, currentPage: -1, searchParams: {}, pageLimit: -1});
     });
 
     app.get('/auto', (req, res) => {
@@ -44,7 +47,7 @@ module.exports = (app) => {
     app.get('/set/:id?', async function(req, res) {
         let setId = req.params.id.toUpperCase();
         if(Object.keys(req.query).length == 0){
-            res.redirect('/set/' + setId + '?page=0');
+            res.redirect('/set/' + setId + '?page=1');
             return;
         }
         let setCards = await $.getCardBySet([], setId);
@@ -52,33 +55,32 @@ module.exports = (app) => {
         currentPage = req.query.page;
         delete req.query['page'];
         let searchParams = ("set/" + setId + "?");
-        let pageNumber = setCards.length / 30;
+        let pageLimit = setCards.length / 30;
         let pageCards = [];
 
-        let limit = (setCards.length < ((+currentPage + 1) * 30) ? setCards.length : ((+currentPage + 1) * 30));
-        for(let i = (currentPage * 30); i < limit; i++){
+        let limit = (setCards.length < (currentPage * 30) ? setCards.length : (currentPage * 30));
+        for(let i = ((currentPage - 1) * 30); i < limit; i++){
             pageCards.push(setCards[i]);
         }
-        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage, searchParams: searchParams});
+        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage, searchParams: searchParams, pageLimit: math.ceil(pageLimit)});
     });    
 
     app.get('/search?', (req, res) => {
         if(Object.keys(req.query).length == 2 && Object.keys(req.query)[0] == 'set'){
-            res.redirect('/set/' + req.query.set + '?page=0');
+            res.redirect('/set/' + req.query.set + '?page=1');
             return;
         }
         currentPage = req.query.page;
         delete req.query['page'];
-        let searchParams = ("search?&" + qs.stringify(req.query));
-        let pageNumber = cards.length / 30;
+        let searchParams = ("search?&" + qs.stringify(req.query) + "&");
+        let pageLimit = cards.length / 30;
         let pageCards = [];
 
-        let limit = (cards.length < ((+currentPage + 1) * 30) ? cards.length : ((+currentPage + 1) * 30));
-        for(let i = (currentPage * 30); i < limit; i++){
+        let limit = (cards.length < (currentPage * 30) ? cards.length : (currentPage * 30));
+        for(let i = ((currentPage - 1) * 30); i < limit; i++){
             pageCards.push(cards[i]);
         }
-        console.log(cards.length);
-        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage, searchParams: searchParams});
+        res.render('index.ejs', {sets: sets, cards: pageCards, currentPage: currentPage, searchParams: searchParams, pageLimit: math.ceil(pageLimit) });
     });
 
 
@@ -92,7 +94,7 @@ module.exports = (app) => {
             }
         }
         cards = $.findCards(req.body);
-        res.redirect('/search?' + qs.stringify(final) + '&page=0');
+        res.redirect('/search?' + qs.stringify(final) + '&page=1');
     });
 
 };

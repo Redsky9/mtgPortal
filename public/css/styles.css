@@ -20,7 +20,7 @@ body {
 }
 
 .container-body {
-    padding-top: 20%;
+    padding-top: 15%;
 }
 
 a {
@@ -372,5 +372,47 @@ ul {
 }
 
 
-  
+/* ===== CAROUSEL ===== */
+.slider {
+    width: 960px;
+    /* height: 560px!important; */
+}
 
+.carousel-img {
+    /* width: 50%; */
+    width: 960px;
+    height: 560px;
+}
+
+.slick-dots li button:before {
+    color: white!important;
+    font-size: 20px!important;
+}
+
+.title-shadow {
+    position: absolute;
+    background: rgba(120, 120, 120, 0.5);
+    display: inline-block;
+    height: 100px;
+}
+
+
+.label {
+    background-color:White;
+    width: auto;
+}
+
+.label-text
+{
+    position: absolute;
+    font-size: 45px;
+    padding: 9px;
+    margin: 15px;
+    background-color:rgba(120, 120, 120, 0.5);
+    height: 49px;
+    text-align: center;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 6px;
+}

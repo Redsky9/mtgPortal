@@ -2,21 +2,25 @@
 	{
 		"id": "XLN",
 		"name": "Ixalan",
-		"image_url": "https://magic.wizards.com/sites/mtg/files/sYCla2unGd_0.jpg"
+		"image_url": "/images/latest_sets/ixilan_set.jpg",
+		"url": "/set/XLN"
 	},
 	{
 		"id": "HOU",
-		"name": "Hour of Devastation"
-		"image_url": "https://magic.wizards.com/sites/mtg/files/HOU_Header.jpg"
+		"name": "Hour of Devastation",
+		"image_url": "/images/latest_sets/hou.jpg",
+		"url": "/set/HOU"
 	},
 	{
 		"id": "AKH",
 		"name": "Amonkhet",
-		"image_url": "http://queuetimes.com/wp-content/uploads/2017/02/636138420089070842.jpg"
+		"image_url": "/images/latest_sets/amonkhet.jpg",
+		"url": "/set/AKH"
 	},
 	{
 		"id": "AER",
 		"name": "Aether Revolt",
-		"image_url": "https://magic.wizards.com/sites/mtg/files/images/featured/AER_Header_Preloader_0.jpg"
-	},
+		"image_url": "/images/latest_sets/aether.jpg",
+		"url": "/set/AER"
+	}
 ]
