@@ -25,8 +25,6 @@
 
 <body>
   <nav class="navbar fixed-top">
-  <form action="/" method="post" name="searchForm" id="s-form">
-  <nav class="navbar fixed-top">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/">
@@ -34,6 +32,7 @@
         </a>
       </div>
       <div class="navbar-nav mr-auto">
+        <form action="/" method="post" name="searchForm" id="s-form">
           <div class="input-group">
             <input id="tags" type="text" name="name" class="form-control" placeholder="Search for...">
             <span class="input-group-btn">
@@ -265,14 +264,14 @@
               </div>
             </li>
           </ul>
+        </form>
         </div>
       </div>
       <nav class="navbar navbar-inverse bg-inverse arrow-menu">
         <a href="#" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-chevron-circle-down fa-3 dropdown-arrow open" aria-hidden="true"></i>
-      </a>
-    </nav>
-  </nav>
-</form>
-</nav>
+          aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-chevron-circle-down fa-3 dropdown-arrow open" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </div>
+  </div>

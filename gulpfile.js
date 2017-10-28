@@ -3,10 +3,12 @@ let concat = require('gulp-concat');
 let cleanCSS = require('gulp-clean-css');
 let uglify = require('gulp-uglify-es').default;
 let pump = require('pump');
+let del = require('del');
 
 gulp.task('css', () => {
  return gulp.src('public/css/*.css')
    .pipe(cleanCSS({compatibility: 'ie8'}))
+//    .pipe(del('public/css/vendor.css'))
    .pipe(concat('vendor.css'))
    .pipe(gulp.dest('public/css/'));
 });
