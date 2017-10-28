@@ -6,6 +6,7 @@ let sets = [];
 let bP = require('body-parser');
 let qs = require('qs');
 let math = require('mathjs');
+let compression = require('compression');
 let cards;
 let currentPage = 1;
 
@@ -13,9 +14,11 @@ module.exports = (app) => {
 
     app.use(bP.urlencoded({extended: true}));
     app.use(bP.json());
+    app.use(compression());
 
 // ===== GET =====
-    app.get('/', (req, res) => {
+    app.get('/', (req, res, next) => {
+        $.setDefaultRedirect(req, res, next);
         sets = $.getAllSets();
         res.render('homepage.ejs', {sets: sets, latestSets: latest_sets, aaa: autocomplete, currentPage: -1, searchParams: {}, pageLimit: -1});
     });

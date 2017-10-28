@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "fs": "0.0.1-security",
@@ -32,10 +33,15 @@
     "express": "^4.16.1",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^0.1.3",
     "image-downloader": "^3.3.0",
     "mathjs": "^3.16.5",
     "nodemon": "^1.12.1",
+    "pump": "^1.0.2",
     "request": "^2.83.0",
     "whatwg-fetch": "^2.0.3"
   }

@@ -1,3 +1,4 @@
+
 /* BODY */
 
 body {
@@ -5,6 +6,10 @@ body {
     background-attachment: fixed;
     color: white;
 }
+
+/* .container {
+    height: 100%;
+} */
 
 ;
 .outer {
@@ -192,13 +197,14 @@ ul {
     margin-left: 3px;
 }
 
-.type ul li input {
-    margin-top: 8px;
-    margin-left: 3px;
-}
-
 .type ul li {
     width: 85%;
+}
+
+.type ul li ul li:nth-child(2) {
+    width: 13px;
+    margin-top: 8px;
+    margin-left: 3px;
 }
 
 .menu-item-body ul li {
@@ -212,6 +218,11 @@ ul {
 
 .rarity ul li {
     width: 86%;
+}
+
+.rarity ul li ul li:nth-child(2) {
+    width: 13px;
+    margin-top: 5px;
 }
 
 .sets {
@@ -258,11 +269,27 @@ ul {
     margin-top: 16vh;
 }
 
+@font-face {
+    font-family: Beleren-Bold;
+    src: url('../fonts/Beleren-Bold.ttf');
+}
+
+@font-face {
+    font-family: Beleren-Small-Caps;
+    src: url('../fonts/Beleren Small Caps.ttf');
+}
+
+@font-face {
+    font-family: MPlantin;
+    src: url('../fonts/MPlantin.ttf');
+}
+
 .card-details {
-    background: rgba(91, 101, 139, 0.5);
+    background: rgba(91, 101, 139, 0.4);
     padding: 40px;
     border-radius: 5px;
     box-shadow: 0 0 30px black;
+    font-family: Beleren-Small-Caps;
 }
 
 .card-details img {
@@ -284,10 +311,18 @@ ul {
 
 .card-items {
     font-size: 14px;
-    text-transform: capitalize;
+    letter-spacing: 0.5px;
     width: 40%;
     margin-left: 1rem;
 }
+
+.card-items-title {
+    font-family: MPlantin;
+}
+
+.card-items-text {
+    font-family: MPlantin;
+ }
 
 /* ===== SET CARDS ===== */
 .set-cards>ul {
@@ -373,6 +408,11 @@ ul {
       color: black;
   }
 
+  .mtgpricee {
+      bottom: 0;
+      position: fixed;
+  }
+  
   .mtgprice:hover {
     color: black;
 }
@@ -423,6 +463,17 @@ ul {
     border-radius: 6px;
 }
 
-.slick-next .slick-arrow {
-    right: 10px;
+.slick-next {
+    right: 35px!important;
+}
+
+.slick-prev {
+    left: 5px!important;
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 50px;
+    color: rgba(255,255,255, 0.3);
+    line-height: 0;
 }

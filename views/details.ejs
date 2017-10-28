@@ -14,28 +14,28 @@
           <table class="table">
             <tbody>
               <tr>
-                <td>Edition:</td>
+                <td class="card-items-title">Edition:</td>
                 <td><%= card.editions[0].set %></td>
               </tr>
               <tr>
-                <td>Type:</td>
+                <td class="card-items-title">Type:</td>
                 <td><%= card.types[0] %></td>
               </tr>
               <tr>
-                <td>Cost:</td>
+                <td class="card-items-title">Cost:</td>
                 <td><%= card.cost %></td>
               </tr>
               <tr>
-                <td>Rarity:</td>
+                <td class="card-items-title">Rarity:</td>
                 <td><%= card.editions[0].rarity %></td>
               </tr>
               <tr>
-                <td>Power/Though:</td>
+                <td class="card-items-title">Power/Though:</td>
                 <td><%= card.power %> / <%= card.toughness %></td>
               </tr>
               <tr>
-                <td>Text:</td>
-                <td><%= card.text %><p class="flavor-text"> <%= card.editions[0].flavor %></p></td>
+                <td class="card-items-title">Text:</td>
+                <td class="card-items-text"><%= card.text %><p class="flavor-text"> <%= card.editions[0].flavor %></p></td>
               </tr>
             </tbody>
           </table>
@@ -43,14 +43,14 @@
         <div class="set-cards">
             <ul>
               <% for(let item in setCards){ %>
-                <div class="small-card">
-                  <a href="/cards/<%= setCards[item].editions[0].multiverse_id %>">
+                <li class="small-card">
+                  <a href="/cards/<%= setCards[item].editions[0].multiverse_id %>" title="<%= setCards[item].name %>">
                     <div class="small-card-title"><%= setCards[item].name %></div>
                     <div class="small-card-body">
                       <img class="small-card-img" src="<%= setCards[item].editions[0].image_url %>" alt="<%= setCards[item].name %>"/>
                     </div>
                   </a>
-                </div>  
+                </li>  
               <% } %>
             </ul>
           </div>
