@@ -8,7 +8,7 @@ let sets = [];
 // app.use(bP.urlencoded({extended: true}));
 
 function setDefaultRedirect(req, res, next) {
-    if(req.headers.host == "http://www.ancient-fortress-92385.herokuapp.com" || req.headers.host == "https://www.ancient-fortress-92385.herokuapp.com") {
+    if(req.headers.host == "www.ancient-fortress-92385.herokuapp.com") {
         console.log("+++ADMIN: /");
         res.writeHead(301, {'Location':'https://ancient-fortress-92385.herokuapp.com'+ req.url, 'Expires': (new Date).toGMTString()});
         res.end();

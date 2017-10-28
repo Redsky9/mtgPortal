@@ -41,7 +41,7 @@ $(() => {
         type: 'GET',
         url: '/auto',
         data: {},
-        async: false,
+        async: true,
         dataType: 'json',
         success: function (data) {
             finalData = data;
